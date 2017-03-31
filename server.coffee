@@ -225,6 +225,9 @@ server = Http.createServer (req, resp) ->
       "X-Content-Type-Options"  : default_security_headers["X-Content-Type-Options"]
       "Content-Security-Policy" : default_security_headers["Content-Security-Policy"]
 
+    if req.headers['referer']
+      transferredHeaders['Referer'] = req.headers['referer']
+
     delete(req.headers.cookie)
 
     [query_digest, encoded_url] = url.pathname.replace(/^\//, '').split("/", 2)

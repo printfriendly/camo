@@ -1,8 +1,7 @@
 {
   "name": "camo",
-  "version": "2.3.3",
-  "dependencies": {
-  },
+  "version": "2.3.4",
+  "dependencies": {},
   "engines": {
     "node": "^0.10.29"
   }
